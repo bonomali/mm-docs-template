@@ -137,9 +137,32 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+      </label>
 <a class="md-nav__link md-nav__link--active" href="." title="Home">
       Home
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#features">
+    Features
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites">
+    Prerequisites
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-start">
+    Quick start
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="demo/" title="Demonstration">
@@ -155,6 +178,24 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#features">
+    Features
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites">
+    Prerequisites
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-start">
+    Quick start
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -163,8 +204,38 @@
 <article class="md-content__inner md-typeset"><a class="md-icon md-content__icon" download href="index.pdf" title="PDF Export"></a>
 <a class="md-icon md-content__icon" href="https://github.com/majkinetor/mm-docs-template/edit/master/source/docs/index.md" title="Edit this page"></a>
 <h1 id="mm-docs">MM-DOCS<a class="headerlink" href="#mm-docs" title="Permanent link">↵</a></h1>
-<p>This is a docker image that setups and runs documentation system designed for all types of project documentation.</p>
-<p>For more information see <a href="https://github.com/majkinetor/mm-docs">https://github.com/majkinetor/mm-docs</a>.</p>
+<p>This project is used to produce all forms of documentation for the service using Markdown and other repository friendly markup languages.</p>
+<p>The documentation is created using the mm-docs docker bundle:</p>
+<ul>
+<li><a href="https://github.com/majkinetor/mm-docs">https://github.com/majkinetor/mm-docs</a></li>
+</ul>
+<p>View how compiled static site looks like on demo site or grab generated artifact. Check out pdf export of single demo page.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">↵</a></h2>
+<ul>
+<li>Write documentation in extended Markdown, HTML, PlantUML and other markup languages</li>
+<li>Beautiful responsive design using material theme</li>
+<li>Navigational bar, TOC, search, internationalization, and various rich presentation functionalities</li>
+<li>Rich diagrams and interface mockups using PlantUML</li>
+<li>Macros can be written in python</li>
+<li>PDF export for each page or full site</li>
+<li>Live reload during editing</li>
+<li>GitLab/GitHub repository connection for editing within a browser</li>
+<li>Automated AppVeyor build and deploy to GitHub pages using Ubuntu image</li>
+<li>Cross platform for hosting and development</li>
+</ul>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">↵</a></h2>
+<ul>
+<li>Docker</li>
+<li>PowerShell (optional, but recommended)</li>
+</ul>
+<h2 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">↵</a></h2>
+<p>To edit documentation:</p>
+<ul>
+<li>Clone <a href="https://github.com/majkinetor/mm-docs-template">new project template</a></li>
+<li>Start development server - run in PowerShell <code class="codehilite"><span class="err">Invoke-Build Run</span></code>. The command is syntax sugar for running docker containers</li>
+<li>Add new documents somewhere in the <code class="codehilite"><span class="err">source\docs</span></code> hierarchy. To be visible in navigation, add to the path to the file in <code class="codehilite"><span class="err">source\mkdocs.yml</span></code> section <code class="codehilite"><span class="err">nav</span></code>, otherwise, the page is available via direct link.</li>
+</ul>
+<p>To build static site run <code class="codehilite"><span class="err">Invoke-Build Build</span></code>.</p>
 <!-- IT keywoards -->
 <hr/>
 <p><em>This is a footer page, edit in <code class="codehilite"><span class="err">inc/footer.md</span></code></em></p>
