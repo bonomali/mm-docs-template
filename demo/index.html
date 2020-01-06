@@ -293,6 +293,11 @@
     Includes
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-variables">
+    Environment variables
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -447,6 +452,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#includes">
     Includes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-variables">
+    Environment variables
   </a>
 </li>
 </ul>
@@ -837,6 +847,13 @@ massa, nec semper lorem quam in massa.</p>
 <li><a href="https://github.com/fralau/mkdocs_macros_plugin#using-includes">Via macros plugin</a></li>
 <li><a href="https://github.com/cmacmackin/markdown-include">Via markdown_include plugin</a></li>
 </ul>
+<p>Macros plugin is much better as it recursively handles variables in partials.</p>
+<h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">↵</a></h2>
+<p>Environment variables can be used inside of configuration file <code class="codehilite"><span class="err">mkdocs.yaml</span></code>.</p>
+<div class="codehilite"><pre><span></span><span class="c">site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]  </span>
+<span class="c">repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]</span>
+<span class="c">repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]</span>
+</pre></div>
 <div class="footnote">
 <hr/>
 <ol>
