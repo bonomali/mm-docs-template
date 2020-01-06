@@ -468,7 +468,6 @@
 <article class="md-content__inner md-typeset"><a class="md-icon md-content__icon" download href="../pdf/combined.pdf" title="PDF Export"></a>
 <a class="md-icon md-content__icon" href="https://github.com/majkinetor/mm-docs-template/edit/master/source/docs/demo.md" title="Edit this page"></a>
 <h1 id="demonstration-page">Demonstration page<a class="headerlink" href="#demonstration-page" title="Permanent link">↵</a></h1>
-<p>Date: </p>
 <p><a href="https://github.com/majkinetor/mm-docs">mm-docs</a> demonstration page.</p>
 <p>For more details about included tools see:</p>
 <ul>
@@ -776,7 +775,7 @@ massa, nec semper lorem quam in massa.</p>
 <h2 id="abbreviations">Abbreviations<a class="headerlink" href="#abbreviations" title="Permanent link">↵</a></h2>
 <p>The following are defined in single file, <code class="codehilite"><span class="err">_inc\abbr.md</span></code> and included on each page.</p>
 <ul>
-<li>IT, XML, JSON</li>
+<li><abbr title="Information Technology">IT</abbr>, <abbr title="Extensible Markup Language">XML</abbr>, <abbr title="JavaScript Object Notation">JSON</abbr></li>
 </ul>
 <h2 id="smart-symbols">Smart symbols<a class="headerlink" href="#smart-symbols" title="Permanent link">↵</a></h2>
 <ul>
@@ -842,18 +841,23 @@ massa, nec semper lorem quam in massa.</p>
 </tbody>
 </table>
 <h2 id="includes">Includes<a class="headerlink" href="#includes" title="Permanent link">↵</a></h2>
-<p>Include other markdown files via 2 mechanisms:</p>
-<ul>
-<li><a href="https://github.com/fralau/mkdocs_macros_plugin#using-includes">Via macros plugin</a></li>
-<li><a href="https://github.com/cmacmackin/markdown-include">Via markdown_include plugin</a></li>
-</ul>
-<p>Macros plugin is much better as it recursively handles variables in partials.</p>
+<p>You may use the include directive from jinja2, directly in your markdown code e.g.:</p>
+<pre>
+## Paragraph
+{%include 'snippet.md' %}
+{%include 'html/content1.html' %}
+</pre>
+<p>The root directory for your included files is in <code class="codehilite"><span class="err">docs_dir</span></code>.</p>
 <h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">↵</a></h2>
 <p>Environment variables can be used inside of configuration file <code class="codehilite"><span class="err">mkdocs.yaml</span></code>.</p>
 <div class="codehilite"><pre><span></span><span class="c">site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]  </span>
 <span class="c">repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]</span>
 <span class="c">repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]</span>
 </pre></div>
+<hr/>
+<p><em>This is a footer page, edit in <code class="codehilite"><span class="err">_inc/footer.md</span></code></em></p>
+<!-- IT keywoards -->
+<p><span class="updated"><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:"/> <strong>Build time:</strong> <span>2020-01-06 17:04:32</span></span></p>
 <div class="footnote">
 <hr/>
 <ol>
