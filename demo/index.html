@@ -289,6 +289,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#jinja-templates">
+    Jinja templates
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#includes">
     Includes
   </a>
@@ -450,6 +455,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#jinja-templates">
+    Jinja templates
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#includes">
     Includes
   </a>
@@ -475,6 +485,7 @@
 <li><a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition">Mkdocs Material Extensions</a></li>
 <li><a href="http://plantuml.com">PlantUML</a></li>
 <li><a href="https://www.mathjax.org/">MathJax</a></li>
+<li><a href="https://jinja.palletsprojects.com">Jinja</a></li>
 </ul>
 <h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">↵</a></h2>
 <ul>
@@ -840,6 +851,16 @@ massa, nec semper lorem quam in massa.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="jinja-templates">Jinja templates<a class="headerlink" href="#jinja-templates" title="Permanent link">↵</a></h2>
+<p>You can do all the work you want with Jinja2, including defining pure macros, conditionals and for loops:</p>
+<pre>
+{% macro input(name, value='', type='text', size=20) -%}
+  &lt;input type="{{ type }}" name="{{ name }}" value="{{ value}}" size="{{ size }}"&gt;
+{%- endmacro %}
+
+{% input('username') }}
+{% input('password', type='password') }}
+</pre>
 <h2 id="includes">Includes<a class="headerlink" href="#includes" title="Permanent link">↵</a></h2>
 <p>You may use the include directive from jinja2, directly in your markdown code e.g.:</p>
 <pre>
@@ -857,7 +878,7 @@ massa, nec semper lorem quam in massa.</p>
 <hr/>
 <p><em>This is a footer page, edit in <code class="codehilite"><span class="err">_inc/footer.md</span></code></em></p>
 <!-- IT keywoards -->
-<p><span class="updated"><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:"/> <strong>Build time:</strong> <span>2020-01-06 17:04:32</span></span></p>
+<p><span class="updated"><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:"/> <strong>Build time:</strong> <span>2020-01-06 20:23:19</span></span></p>
 <div class="footnote">
 <hr/>
 <ol>
