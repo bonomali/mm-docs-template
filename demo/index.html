@@ -494,34 +494,35 @@
 <li><a href="https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme">Extending theme</a></li>
 </ul>
 <h2 id="text">Text<a class="headerlink" href="#text" title="Permanent link">↵</a></h2>
+<p><strong>Unicode</strong>: Мислим дакле постојим</p>
 <h3 id="basic-effects">Basic effects<a class="headerlink" href="#basic-effects" title="Permanent link">↵</a></h3>
 <table>
 <thead>
 <tr>
-<th>Code</th>
 <th>Output</th>
+<th>Code</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="err">**Bold text**</span></code> or <code class="codehilite"><span class="err">__Bold text__</span></code></td>
 <td><strong>Bold text</strong></td>
+<td><code class="codehilite"><span class="err">**Bold text**</span></code> or <code class="codehilite"><span class="err">__Bold text__</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="err">*Italic text*</span></code> or <code class="codehilite"><span class="err">_Italic text_</span></code></td>
 <td><em>Italic text</em></td>
+<td><code class="codehilite"><span class="err">*Italic text*</span></code> or <code class="codehilite"><span class="err">_Italic text_</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="err">~~Strike Through~~</span></code></td>
 <td><del>Strike Through</del></td>
+<td><code class="codehilite"><span class="err">~~Strike Through~~</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="err">==Colored text==</span></code></td>
 <td><mark>Colored text</mark></td>
+<td><code class="codehilite"><span class="err">==Colored text==</span></code></td>
 </tr>
 <tr>
-<td><code>`Inline code`</code></td>
 <td><code class="codehilite"><span class="err">Inline code</span></code></td>
+<td><code>`Inline code`</code></td>
 </tr>
 </tbody>
 </table>
@@ -529,50 +530,104 @@
 <table>
 <thead>
 <tr>
-<th>Code</th>
 <th>Output</th>
+<th>Code</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="err">++enter++</span></code></td>
 <td><span class="keys"><kbd class="key-enter">Enter</kbd></span></td>
+<td><code class="codehilite"><span class="err">++enter++</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="err">++"PgDown"++</span></code></td>
 <td><span class="keys"><kbd>PgDown</kbd></span></td>
+<td><code class="codehilite"><span class="err">++"PgDown"++</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="err">++"Non Existent Key"++</span></code></td>
 <td><span class="keys"><kbd>Non Existent Key</kbd></span></td>
+<td><code class="codehilite"><span class="err">++"Non Existent Key"++</span></code></td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>Unicode: Мислим дакле постојим</li>
-</ul>
 <h2 id="links-footnotes-and-comments">Links, footnotes and comments<a class="headerlink" href="#links-footnotes-and-comments" title="Permanent link">↵</a></h2>
 <h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">↵</a></h3>
-<ul>
-<li><a href="https://www.google.com">I'm an inline-style link</a></li>
-<li><a href="https://www.google.com" title="Google's Homepage">I'm an inline-style link with title</a></li>
-<li><a href="https://www.mozilla.org">I'm a reference-style link</a></li>
-<li><a href="./index">I'm a relative reference to a repository file</a></li>
-<li><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></li>
-<li>You can leave a link empty and use the <a href="http://www.reddit.com">link text itself</a></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.google.com">An inline-style link</a></td>
+<td><code class="codehilite"><span class="err">[An inline-style link](https://www.google.com)</span></code></td>
+</tr>
+<tr>
+<td><a href="https://www.google.com" title="Google's Homepage">An inline-style link with title</a></td>
+<td><code class="codehilite"><span class="err">[An inline-style link with title](https://www.google.com "Google's Homepage")</span></code></td>
+</tr>
+<tr>
+<td><a href="https://www.mozilla.org">Reference-style link</a></td>
+<td><code class="codehilite"><span class="err">[Reference-style link][arbitrary reference text]</span></code><br/><code class="codehilite"><span class="err">[arbitrary reference text]: https://www.mozilla.org</span></code></td>
+</tr>
+<tr>
+<td><a href="../about/overview">Relative reference to a repository file</a></td>
+<td><code class="codehilite"><span class="err">[Relative reference to a repository file](../about/overview)</span></code></td>
+</tr>
+<tr>
+<td><a href="http://slashdot.org">Numbers for reference-style link definitions</a></td>
+<td><code class="codehilite"><span class="err">[Numbers for reference-style link definitions][1]</span></code><br/><code class="codehilite"><span class="err">[1]: http://slashdot.org</span></code></td>
+</tr>
+<tr>
+<td>Use the <a href="http://www.reddit.com">link text itself</a></td>
+<td><code class="codehilite"><span class="err">Use the [link text itself]</span></code><br/><code class="codehilite"><span class="err">[link text itself]: http://www.reddit.com</span></code></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Magic links and emails:</strong> turned to links as recognized</p>
-<ul>
-<li><a href="http://www.google.com">http://www.google.com</a></li>
-<li><a href="mailto:majkinetor@gmail.com">majkinetor@gmail.com</a></li>
-<li><a href="http://www.google.com">www.google.com</a></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.google.com">http://www.google.com</a></td>
+<td><code class="codehilite"><span class="c">http://www.google.com</span></code></td>
+</tr>
+<tr>
+<td><a href="mailto:majkinetor@gmail.com">majkinetor@gmail.com</a></td>
+<td><code class="codehilite"><span class="err">majkinetor@gmail.com</span></code></td>
+</tr>
+<tr>
+<td><a href="http://www.google.com">www.google.com</a></td>
+<td><code class="codehilite"><span class="err">www.google.com</span></code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">↵</a></h3>
-<ul>
-<li>I am a text with a short footnote<sup id="fnref:short"><a class="footnote-ref" href="#fn:short">1</a></sup></li>
-<li>I am a text with a long footnote<sup id="fnref:long"><a class="footnote-ref" href="#fn:long">2</a></sup></li>
-</ul>
+<div class="codehilite"><pre><span></span>A text with a short footnote[^short]
+[<span class="nl">^short</span>]: <span class="na">https://en.wikipedia.org/wiki/Note_(typography)</span>
+</pre></div>
+<p>A text with a short footnote<sup id="fnref:short"><a class="footnote-ref" href="#fn:short">1</a></sup></p>
+<hr/>
+<div class="codehilite"><pre><span></span>A text with a long footnote[^long]
+[<span class="nl">^long</span>]:   
+    <span class="na">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod</span>
+    massa, nec semper lorem quam in massa.
+
+    ```
+    code
+</pre></div>
+<p>A text with a long footnote<sup id="fnref:long"><a class="footnote-ref" href="#fn:long">2</a></sup></p>
 <h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">↵</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">The</span><span class="w"> </span><span class="nc">text</span><span class="w"> </span><span class="k">contains</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">comments</span><span class="w"> </span><span class="n">bellow</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">visible</span><span class="p">.</span><span class="w"></span>
+<span class="o">[</span><span class="n">comment</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="p">(</span><span class="n">Developed</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">Visual</span><span class="w"> </span><span class="n">Studio</span><span class="w"> </span><span class="n">Code</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">plantuml</span><span class="w"> </span><span class="nl">extension</span><span class="p">:</span><span class="w"> </span><span class="n">cinst</span><span class="w"> </span><span class="n">visualstudiocode</span><span class="p">;</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="c1">--install-extension jebbs.plantuml)</span>
+<span class="o">[</span><span class="n">comment</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="p">(</span><span class="n">PlantUML</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">influence</span><span class="w"> </span><span class="n">diagrams</span><span class="p">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">developped</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="mf">1.2017.15</span><span class="err">:</span><span class="w"> </span><span class="n">cinst</span><span class="w"> </span><span class="n">plantuml</span><span class="w"> </span><span class="c1">--version 1.2017.15)</span>
+</pre></div>
 <p>The text contains 2 comments bellow this line which should not be visible.</p>
 <h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">↵</a></h2>
 <blockquote>
@@ -814,7 +869,7 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h2 id="custom-span-class">Custom span class<a class="headerlink" href="#custom-span-class" title="Permanent link">↵</a></h2>
 <p>Adding custom HTML classes to span elements. </p>
-<p>Syntax: <code class="codehilite"><span class="err">!!&lt;class names&gt;|&lt;text to be wrapped&gt;!!</span></code>.</p>
+<p><strong>Syntax</strong>: <code class="codehilite"><span class="err">!!&lt;class names&gt;|&lt;text to be wrapped&gt;!!</span></code>.</p>
 <p>The following example uses css from the custom_css file, classes <code class="codehilite"><span class="err">color-yellow</span></code> and <code class="codehilite"><span class="err">backgrond-blue</span></code>:</p>
 <ul>
 <li><code class="codehilite"><span class="err">I love !!color-yellow background-blue|cookies!!</span></code> - I love <span class="color-yellow background-blue">cookies</span></li>
@@ -878,7 +933,7 @@ massa, nec semper lorem quam in massa.</p>
 <hr/>
 <p><em>This is a footer page, edit in <code class="codehilite"><span class="err">_inc/footer.md</span></code></em></p>
 <!-- IT keywoards -->
-<p><span class="updated"><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:"/> <strong>Build time:</strong> <span>2020-01-06 20:23:19</span></span></p>
+<p><span class="updated"><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:"/> <strong>Build time:</strong> <span>2020-01-07 19:03:39</span></span></p>
 <div class="footnote">
 <hr/>
 <ol>
